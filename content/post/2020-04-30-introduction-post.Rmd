@@ -10,4 +10,6 @@ description: ''
 topics: []
 ---
 
-This is my first blog post. Pretty cool. ![CyberForce 2019](/post/2020-04-30-introduction-post_files/rsz_p-10385-033.jpg)
+This is my first blog post. Pretty cool. 
+
+![CyberForce 2019](/post/2020-04-30-introduction-post_files/rsz_p-10385-033.jpg){width=50%}
