@@ -10,7 +10,7 @@ topics: []
 ---
 
 
-Hello again! And welcome to my second post. If you missed the first one, you can read it [**here**](../project_scope_1/).
+Hello again! And welcome to my second post. If you missed the first one, you can read it [**here**](../project-scope-part-1-of-3/).
 
 We left off by talking about what heartbeat and threat reports are.  
 
@@ -41,7 +41,7 @@ The algorithm now knows how many tee-shirts were sold when the price was $10/shi
 
 We then ask it to calculate the price when a shirt is priced a $11.50. It hasn’t seen this price before, but it knows how much the sale rate tends to increase or decrease when the prices have been adjusted in the past. 
 
-![Table 2](/static/Images/table_2.png)
+![](../Images/table_2.png)
 
 In this example, the algorithm would likely tell us that if we adjusted the price to be $11.50/tee-shirt, we would probably sell 13 tee-shirts. If you’re interested in learning about how supervised algorithms can be further broken down into regression and classification, which algorithms are in each category, and advantages or disadvantages, see [**footnote #4**](http://intellspot.com/unsupervised-vs-supervised-learning/).
 
@@ -49,7 +49,7 @@ Rather than focusing on producing a finite value, an *unsupervised* algorithm tr
 
 Going back to our gift shop example, maybe we don’t have information about tee-shirt sales. Instead, we have information about our customers. We have recorded the gender, age, and time of day when they visited the shop for five of our customers.
 
-![Table 3](/static/Images/table_3.png)
+![](../Images/table_3.png)
 
 We can’t ask the algorithm to tell us who will walk in the store next, but we can ask it what patterns it sees. It would likely help us recognize that most of our customers come in the AM. It could also break it down a bit further and recognize that of those AM customers most of them are Male or most of them are young. 
 
@@ -57,4 +57,4 @@ This is a super simple example. In short, unsupervised algorithms are typically 
 
 If you're interested in diving into this subject a bit deeper, [**this article**](https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/) explains the difference between supervised, unsupervised, and semi-supervised machine learning algorithms. 
 
-That wraps it up for part 2 of 3! In our next post we'll take a look at how to prepare your data for a machine learning algorithm and what some of the constraints are. 
+That wraps it up for part 2 of 3! In [**post #3**](../project-scope-part-3-of-3/)  we'll take a look at how to prepare your data for a machine learning algorithm and what some of the constraints are. 

@@ -10,7 +10,7 @@ topics: []
 ---
 
 
-Welcome to the final part of our project scope! If you missed the first two, you can read [**part 1 here**](../project_scope_1/) and [**part 2 here**](../project_scope_2/).
+Welcome to the final part of our project scope! If you missed the first two, you can read [**part 1 here**](../project-scope-part-1-of-3/) and [**part 2 here**](../project-scope-part-2-of-3/).
 
 Last time we discussed some of the differences between supervised and unsupervised algorithms. In this competition I’ll most likely be using supervised algorithms. 
 
@@ -23,7 +23,7 @@ A training set of data includes the correct answers. It’s an opportunity for t
 
 Here’s a snippet of what the data looks like. The first row is our unique machine identifier and the second column is our “answer key” that says whether or not malware was detected on that machine. There are several other columns of that as well but they aren’t pictured for simplicity’s sake. 
 
-![Data Header](/static/Images/data_header_1.png)
+![](../Images/data_header_1.png)
 
 Once the algorithm has learned from the training data (and you have tuned the parameters to your liking), you can then feed it the test data. Again, the test data is exactly like the training data, it just has different rows and does not include the “answer key” column. The hope is that the algorithm learned well and you can get a high confidence score as an output. 
 
