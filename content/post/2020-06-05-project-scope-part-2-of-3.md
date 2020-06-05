@@ -1,16 +1,14 @@
 ---
-title: "Project Scope - Part 2 of 3"
-author: "Saffra Parks"
-date: "6/4/2020"
-slug: project_scope_2
-categories:
-  - R
-  - Cyber Security
-  - Python
+title: Project Scope - Part 2 of 3
+author: ~
+date: '2020-06-05'
+slug: project-scope-part-2-of-3
+categories: []
 tags: []
 description: ''
 topics: []
 ---
+
 
 Hello again! And welcome to my second post. If you missed the first one, you can read it [**here**](../project_scope_1/).
 
@@ -36,12 +34,8 @@ First off, what is machine learning? In my own words, it is what happens when yo
 There are two main types of algorithms: supervised and unsupervised. 
 A *supervised* algorithm is when you feed it data that already has answers built in. It then learns from that data and when you start feeding it new data it says “Oh, I remember seeing something like this before, I’ll make an educated guess about what this new value should be.” For example, maybe we are trying to predict how many tee-shirts a gift shop will sell when they adjust their prices. We give it this information:
 
-```{r}
-knitr::include_graphics("Images/table_1.png")
-```
 
-
-![](../post/Images/table_1.png)
+![](../Images/table_1.png)
 
 The algorithm now knows how many tee-shirts were sold when the price was $10/shirt, $10.50/shirt, etc. 
 

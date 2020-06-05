@@ -221,7 +221,7 @@
 
   <div>
     <i class="fa fa-calendar fa-fw"></i>
-    <time>01 Jan 0001, 00:00</time>
+    <time>05 Jun 2020, 00:00</time>
   </div>
 
   
@@ -238,14 +238,11 @@
 
 </div>
 
-  
-
-
-<p>Hello again! And welcome to my second post. If you missed the first one, you can read it <a href="../project_scope_1/"><strong>here</strong></a>.</p>
+  <p>Hello again! And welcome to my second post. If you missed the first one, you can read it <a href="../project_scope_1/"><strong>here</strong></a>.</p>
 <p>We left off by talking about what heartbeat and threat reports are.</p>
-<p>The purpose of a heartbeat report is to determine if the end client is responsive. “System Center Operations Manager uses heartbeats to monitor communication channels between an agent and the agent’s primary management server. A heartbeat is a packet of data sent from the agent to the management server on a regular basis, by default every 60 seconds, using port 5723 (UDP).” <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>1</strong></a> Every 60 seconds a communication happens to determine if a device is still active. You can read more about heartbeat reports <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>here</strong></a>.</p>
+<p>The purpose of a heartbeat report is to determine if the end client is responsive. “System Center Operations Manager uses heartbeats to monitor communication channels between an agent and the agent&rsquo;s primary management server. A heartbeat is a packet of data sent from the agent to the management server on a regular basis, by default every 60 seconds, using port 5723 (UDP).” <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>1</strong></a> Every 60 seconds a communication happens to determine if a device is still active. You can read more about heartbeat reports <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>here</strong></a>.</p>
 <p>A threat report is more in-depth. Rather than just determining if an agent (or computer or system) is running, it outlines details of what has been going on. It’s like reviewing the security camera footage on your home surveillance cameras. I found a great description of what a threat is, provided by the good folks at Rapid7. They say, “When there is an adversary with the intent, capability, and opportunity, a threat exists. When two or more of these elements are present (e.g., intent and capability, but no opportunity), we call it an impending threat, because there is just one missing piece before it becomes a true threat. When there is just one element present (e.g., an opportunity in the form of a software vulnerability), we call it a potential threat.” <a href="https://www.rapid7.com/research/report/2020-threat-report/"><strong>2</strong></a> A threat report from Microsoft Defender may look something like this:</p>
-<p><img src="/static/Images/threat_report.png" alt="Example of Threat Report" />
+<p><img src="/static/Images/threat_report.png" alt="Example of Threat Report">
 <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports"><strong>3</strong></a></p>
 <p>There are two main sections here, <em>Alert Trends</em> and <em>Alert Summaries</em>. A trend allows you to see what is currently happening (if there a spike in resources or attacks) and a summary shows the aggregated events that have happened. For more examples of what these reports show, check out footnote <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports"><strong>#3</strong></a>.</p>
 <p>Alright, now we understand that we are working with Microsoft Defender data and we know it’s located at the endpoints of our network. Let’s move on.</p>
@@ -254,43 +251,35 @@
 </blockquote>
 <p>This is we begin getting into some of the details about what columns we have in our data. We need to take a quick step back and review how machine learning data is structured. Since this is a machine learning competition, that will be important.</p>
 <p>First off, what is machine learning? In my own words, it is what happens when you use an algorithm to help predict something. There is a lot of math and programming that goes behind creating a machine learning algorithm but generally rather than creating our own algorithms, we just use the ones that have already been nicely packaged.</p>
-<p>There are two main types of algorithms: supervised and unsupervised.
+<p>There are two main types of algorithms: supervised and unsupervised. 
 A <em>supervised</em> algorithm is when you feed it data that already has answers built in. It then learns from that data and when you start feeding it new data it says “Oh, I remember seeing something like this before, I’ll make an educated guess about what this new value should be.” For example, maybe we are trying to predict how many tee-shirts a gift shop will sell when they adjust their prices. We give it this information:</p>
-<pre class="r"><code>knitr::include_graphics(&quot;Images/table_1.png&quot;)</code></pre>
-<p><img src="Images/table_1.png" width="118" /></p>
-<p><img src="../post/Images/table_1.png" /></p>
+<p><img src="../Images/table_1.png" alt=""></p>
 <p>The algorithm now knows how many tee-shirts were sold when the price was $10/shirt, $10.50/shirt, etc.</p>
 <p>We then ask it to calculate the price when a shirt is priced a $11.50. It hasn’t seen this price before, but it knows how much the sale rate tends to increase or decrease when the prices have been adjusted in the past.</p>
-<div class="figure">
-<img src="/static/Images/table_2.png" alt="Table 2" />
-<p class="caption">Table 2</p>
-</div>
+<p><img src="/static/Images/table_2.png" alt="Table 2"></p>
 <p>In this example, the algorithm would likely tell us that if we adjusted the price to be $11.50/tee-shirt, we would probably sell 13 tee-shirts. If you’re interested in learning about how supervised algorithms can be further broken down into regression and classification, which algorithms are in each category, and advantages or disadvantages, see <a href="http://intellspot.com/unsupervised-vs-supervised-learning/"><strong>footnote #4</strong></a>.</p>
 <p>Rather than focusing on producing a finite value, an <em>unsupervised</em> algorithm tries to find patterns in the data.</p>
 <p>Going back to our gift shop example, maybe we don’t have information about tee-shirt sales. Instead, we have information about our customers. We have recorded the gender, age, and time of day when they visited the shop for five of our customers.</p>
-<div class="figure">
-<img src="/static/Images/table_3.png" alt="Table 3" />
-<p class="caption">Table 3</p>
-</div>
+<p><img src="/static/Images/table_3.png" alt="Table 3"></p>
 <p>We can’t ask the algorithm to tell us who will walk in the store next, but we can ask it what patterns it sees. It would likely help us recognize that most of our customers come in the AM. It could also break it down a bit further and recognize that of those AM customers most of them are Male or most of them are young.</p>
 <p>This is a super simple example. In short, unsupervised algorithms are typically best used for exploring the data and finding association and clustering patterns.</p>
-<p>If you’re interested in diving into this subject a bit deeper, <a href="https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/"><strong>this article</strong></a> explains the difference between supervised, unsupervised, and semi-supervised machine learning algorithms.</p>
-<p>That wraps it up for part 2 of 3! In our next post we’ll take a look at how to prepare your data for a machine learning algorithm and what some of the constraints are.</p>
+<p>If you&rsquo;re interested in diving into this subject a bit deeper, <a href="https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/"><strong>this article</strong></a> explains the difference between supervised, unsupervised, and semi-supervised machine learning algorithms.</p>
+<p>That wraps it up for part 2 of 3! In our next post we&rsquo;ll take a look at how to prepare your data for a machine learning algorithm and what some of the constraints are.</p>
 
   
   <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
 <ul class="share-buttons">
-	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fproject_scope_2%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fproject-scope-part-2-of-3%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2fproject_scope_2%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2fproject-scope-part-2-of-3%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="https://plus.google.com/share?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	<li><a href="https://plus.google.com/share?url=%2fpost%2fproject-scope-part-2-of-3%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2fproject_scope_2%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2fproject-scope-part-2-of-3%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2fproject-scope-part-2-of-3%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
 	</li>&nbsp;&nbsp;&nbsp;
-	<li><a href="http://www.reddit.com/submit?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2fproject-scope-part-2-of-3%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
 	</li>
 </ul>
 
@@ -322,13 +311,13 @@ A <em>supervised</em> algorithm is when you feed it data that already has answer
 <div class="prev-next-post pure-g">
   <div class="pure-u-1-24" style="text-align: left;">
     
-    <a href="/post/project_scope_3/"><i class="fa fa-chevron-left"></i></a>
+    <a href="/post/project-scope-part-3-of-3/"><i class="fa fa-chevron-left"></i></a>
     
   </div>
   <div class="pure-u-10-24">
     
     <nav class="prev">
-      <a href="/post/project_scope_3/">Project Scope - Part 3 of 3</a>
+      <a href="/post/project-scope-part-3-of-3/">Project Scope - Part 3 of 3</a>
     </nav>
     
   </div>
@@ -338,13 +327,13 @@ A <em>supervised</em> algorithm is when you feed it data that already has answer
   <div class="pure-u-10-24">
     
     <nav class="next">
-      <a href="/post/project_scope_1/">Project Scope - Part 1 of 3</a>
+      <a href="/post/project-scope-part-1-of-3/">Project Scope - Part 1 of 3</a>
     </nav>
     
   </div>
   <div class="pure-u-1-24" style="text-align: right;">
     
-    <a href="/post/project_scope_1/"><i class="fa fa-chevron-right"></i></a>
+    <a href="/post/project-scope-part-1-of-3/"><i class="fa fa-chevron-right"></i></a>
     
   </div>
 </div>

@@ -29,10 +29,9 @@ topics: []
 <p>First off, what is machine learning? In my own words, it is what happens when you use an algorithm to help predict something. There is a lot of math and programming that goes behind creating a machine learning algorithm but generally rather than creating our own algorithms, we just use the ones that have already been nicely packaged.</p>
 <p>There are two main types of algorithms: supervised and unsupervised.
 A <em>supervised</em> algorithm is when you feed it data that already has answers built in. It then learns from that data and when you start feeding it new data it says “Oh, I remember seeing something like this before, I’ll make an educated guess about what this new value should be.” For example, maybe we are trying to predict how many tee-shirts a gift shop will sell when they adjust their prices. We give it this information:</p>
-<div class="figure">
-<img src="/static/Images/table_1.png" alt="Table 1" />
-<p class="caption">Table 1</p>
-</div>
+<pre class="r"><code>knitr::include_graphics(&quot;Images/table_1.png&quot;)</code></pre>
+<p><img src="Images/table_1.png" width="118" /></p>
+<p><img src="../post/Images/table_1.png" /></p>
 <p>The algorithm now knows how many tee-shirts were sold when the price was $10/shirt, $10.50/shirt, etc.</p>
 <p>We then ask it to calculate the price when a shirt is priced a $11.50. It hasn’t seen this price before, but it knows how much the sale rate tends to increase or decrease when the prices have been adjusted in the past.</p>
 <div class="figure">
