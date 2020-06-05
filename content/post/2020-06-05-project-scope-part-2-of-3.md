@@ -18,7 +18,7 @@ The purpose of a heartbeat report is to determine if the end client is responsiv
 
 A threat report is more in-depth. Rather than just determining if an agent (or computer or system) is running, it outlines details of what has been going on. It’s like reviewing the security camera footage on your home surveillance cameras. I found a great description of what a threat is, provided by the good folks at Rapid7. They say, “When there is an adversary with the intent, capability, and opportunity, a threat exists. When two or more of these elements are present (e.g., intent and capability, but no opportunity), we call it an impending threat, because there is just one missing piece before it becomes a true threat. When there is just one element present (e.g., an opportunity in the form of a software vulnerability), we call it a potential threat.” [**2**](https://www.rapid7.com/research/report/2020-threat-report/) A threat report from Microsoft Defender may look something like this:
 
-![Example of Threat Report](/static/Images/threat_report.png)
+![](../Images/threat_report.png)
 [**3**](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports)
 
 There are two main sections here, *Alert Trends* and *Alert Summaries*. A trend allows you to see what is currently happening (if there a spike in resources or attacks) and a summary shows the aggregated events that have happened. For more examples of what these reports show, check out footnote [**#3**](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports).
