@@ -55,5 +55,27 @@ My goal is to write my blog in a way that someone with only very basic computer 
 For those who do have a more technical background, please see the references listed in the footnotes.</description>
     </item>
     
+    <item>
+      <title>Project Scope - Part 2 of 3</title>
+      <link>/post/project_scope_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/project_scope_2/</guid>
+      <description>Hello again! And welcome to my second post. If you missed the first one, you can read it here.
+We left off by talking about what heartbeat and threat reports are.
+The purpose of a heartbeat report is to determine if the end client is responsive. “System Center Operations Manager uses heartbeats to monitor communication channels between an agent and the agent’s primary management server. A heartbeat is a packet of data sent from the agent to the management server on a regular basis, by default every 60 seconds, using port 5723 (UDP).</description>
+    </item>
+    
+    <item>
+      <title>Project Scope - Part 3 of 3</title>
+      <link>/post/project_scope_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/post/project_scope_3/</guid>
+      <description>Welcome to the final part of our project scope! If you missed the first two, you can read part 1 here and part 2 here.
+Last time we discussed some of the differences between supervised and unsupervised algorithms. In this competition I’ll most likely be using supervised algorithms.
+The data will be broken into two main sections: train and test (I will also be using a validation set but we won’t dive into that here).</description>
+    </item>
+    
   </channel>
 </rss>

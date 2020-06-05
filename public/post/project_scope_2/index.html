@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.69.2" />
+
+  <title>Project Scope - Part 2 of 3 &middot; Cyber Data Science</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="/">Organization</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in//saffra-parks" rel="me" target="_blank"><i class="fab fa-linkedin"></i></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/SaffraP" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users//saffra" rel="me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2020. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Project Scope - Part 2 of 3</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 0001, 00:00</time>
+  </div>
+
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+
+</div>
+
+  
+
+
+<p>Hello again! And welcome to my second post. If you missed the first one, you can read it <a href="../project_scope_1/"><strong>here</strong></a>.</p>
+<p>We left off by talking about what heartbeat and threat reports are.</p>
+<p>The purpose of a heartbeat report is to determine if the end client is responsive. “System Center Operations Manager uses heartbeats to monitor communication channels between an agent and the agent’s primary management server. A heartbeat is a packet of data sent from the agent to the management server on a regular basis, by default every 60 seconds, using port 5723 (UDP).” <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>1</strong></a> Every 60 seconds a communication happens to determine if a device is still active. You can read more about heartbeat reports <a href="https://docs.microsoft.com/en-us/system-center/scom/manage-agent-heartbeat-overview?view=sc-om-2019"><strong>here</strong></a>.</p>
+<p>A threat report is more in-depth. Rather than just determining if an agent (or computer or system) is running, it outlines details of what has been going on. It’s like reviewing the security camera footage on your home surveillance cameras. I found a great description of what a threat is, provided by the good folks at Rapid7. They say, “When there is an adversary with the intent, capability, and opportunity, a threat exists. When two or more of these elements are present (e.g., intent and capability, but no opportunity), we call it an impending threat, because there is just one missing piece before it becomes a true threat. When there is just one element present (e.g., an opportunity in the form of a software vulnerability), we call it a potential threat.” <a href="https://www.rapid7.com/research/report/2020-threat-report/"><strong>2</strong></a> A threat report from Microsoft Defender may look something like this:</p>
+<p><img src="/static/Images/threat_report.png" alt="Example of Threat Report" />
+<a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports"><strong>3</strong></a></p>
+<p>There are two main sections here, <em>Alert Trends</em> and <em>Alert Summaries</em>. A trend allows you to see what is currently happening (if there a spike in resources or attacks) and a summary shows the aggregated events that have happened. For more examples of what these reports show, check out footnote <a href="https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/threat-protection-reports"><strong>#3</strong></a>.</p>
+<p>Alright, now we understand that we are working with Microsoft Defender data and we know it’s located at the endpoints of our network. Let’s move on.</p>
+<blockquote>
+<p><em>“Each row in this dataset corresponds to a machine, uniquely identified by a MachineIdentifier. HasDetections is the ground truth and indicates that Malware was detected on the machine. Using the information and labels in train.csv, you must predict the value for HasDetections for each machine in test.csv.”</em></p>
+</blockquote>
+<p>This is we begin getting into some of the details about what columns we have in our data. We need to take a quick step back and review how machine learning data is structured. Since this is a machine learning competition, that will be important.</p>
+<p>First off, what is machine learning? In my own words, it is what happens when you use an algorithm to help predict something. There is a lot of math and programming that goes behind creating a machine learning algorithm but generally rather than creating our own algorithms, we just use the ones that have already been nicely packaged.</p>
+<p>There are two main types of algorithms: supervised and unsupervised.
+A <em>supervised</em> algorithm is when you feed it data that already has answers built in. It then learns from that data and when you start feeding it new data it says “Oh, I remember seeing something like this before, I’ll make an educated guess about what this new value should be.” For example, maybe we are trying to predict how many tee-shirts a gift shop will sell when they adjust their prices. We give it this information:</p>
+<div class="figure">
+<img src="/static/Images/table_1.png" alt="Table 1" />
+<p class="caption">Table 1</p>
+</div>
+<p>The algorithm now knows how many tee-shirts were sold when the price was $10/shirt, $10.50/shirt, etc.</p>
+<p>We then ask it to calculate the price when a shirt is priced a $11.50. It hasn’t seen this price before, but it knows how much the sale rate tends to increase or decrease when the prices have been adjusted in the past.</p>
+<div class="figure">
+<img src="/static/Images/table_2.png" alt="Table 2" />
+<p class="caption">Table 2</p>
+</div>
+<p>In this example, the algorithm would likely tell us that if we adjusted the price to be $11.50/tee-shirt, we would probably sell 13 tee-shirts. If you’re interested in learning about how supervised algorithms can be further broken down into regression and classification, which algorithms are in each category, and advantages or disadvantages, see <a href="http://intellspot.com/unsupervised-vs-supervised-learning/"><strong>footnote #4</strong></a>.</p>
+<p>Rather than focusing on producing a finite value, an <em>unsupervised</em> algorithm tries to find patterns in the data.</p>
+<p>Going back to our gift shop example, maybe we don’t have information about tee-shirt sales. Instead, we have information about our customers. We have recorded the gender, age, and time of day when they visited the shop for five of our customers.</p>
+<div class="figure">
+<img src="/static/Images/table_3.png" alt="Table 3" />
+<p class="caption">Table 3</p>
+</div>
+<p>We can’t ask the algorithm to tell us who will walk in the store next, but we can ask it what patterns it sees. It would likely help us recognize that most of our customers come in the AM. It could also break it down a bit further and recognize that of those AM customers most of them are Male or most of them are young.</p>
+<p>This is a super simple example. In short, unsupervised algorithms are typically best used for exploring the data and finding association and clustering patterns.</p>
+<p>If you’re interested in diving into this subject a bit deeper, <a href="https://machinelearningmastery.com/supervised-and-unsupervised-machine-learning-algorithms/"><strong>this article</strong></a> explains the difference between supervised, unsupervised, and semi-supervised machine learning algorithms.</p>
+<p>That wraps it up for part 2 of 3! In our next post we’ll take a look at how to prepare your data for a machine learning algorithm and what some of the constraints are.</p>
+
+  
+  <h4><i class="fa-share-alt" aria-hidden="true"></i>&nbsp;Share!</h4>
+<ul class="share-buttons">
+	<li><a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fproject_scope_2%2f" target="_blank" title="Share on Facebook"><i class="fa-facebook" aria-hidden="true"></i><span class="sr-only">Share on Facebook</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://twitter.com/intent/tweet?source=%2fpost%2fproject_scope_2%2f&via=HorribleGeek" target="_blank" title="Tweet"><i class="fa-twitter" aria-hidden="true"></i><span class="sr-only">Tweet</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="https://plus.google.com/share?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Share on Google+"><i class="fa-google-plus" aria-hidden="true"></i><span class="sr-only">Share on Google+</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.tumblr.com/share?v=3&u=%2fpost%2fproject_scope_2%2f" target="_blank" title="Post to Tumblr"><i class="fa-tumblr" aria-hidden="true"></i><span class="sr-only">Post to Tumblr</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://pinterest.com/pin/create/button/?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Pin it"><i class="fa-pinterest-p" aria-hidden="true"></i><span class="sr-only">Pin it</span></a>
+	</li>&nbsp;&nbsp;&nbsp;
+	<li><a href="http://www.reddit.com/submit?url=%2fpost%2fproject_scope_2%2f" target="_blank" title="Submit to Reddit"><i class="fa-reddit-alien" aria-hidden="true"></i><span class="sr-only">Submit to Reddit</span></a>
+	</li>
+</ul>
+
+
+<style>
+	ul.share-buttons{
+	  list-style: none;
+	  padding: 0;
+	}
+
+	ul.share-buttons li{
+	  display: inline;
+	}
+
+	ul.share-buttons .sr-only{
+	  position: absolute;
+	  clip: rect(1px 1px 1px 1px);
+	  clip: rect(1px, 1px, 1px, 1px);
+	  padding: 0;
+	  border: 0;
+	  height: 1px;
+	  width: 1px;
+	  overflow: hidden;
+	}
+</style>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="/post/project_scope_3/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="/post/project_scope_3/">Project Scope - Part 3 of 3</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="/post/project_scope_1/">Project Scope - Part 1 of 3</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="/post/project_scope_1/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="/js/ui.js"></script>
+<script src="/js/menus.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'Your Google Analytics tracking ID', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+<script src="/js/math-code.js"></script>
+  <script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  
+
+
+</body>
+</html>
+
